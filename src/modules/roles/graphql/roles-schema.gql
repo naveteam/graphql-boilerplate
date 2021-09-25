@@ -1,0 +1,16 @@
+
+type Role {
+  id: ID
+  role: String
+}
+
+type RolePagination {
+  results: [Role]
+  pageCount: Int
+  page: Int
+  pageSize: Int
+}
+
+type Query {
+  getRoles(page: Int, pageSize: Int): RolePagination
+}
